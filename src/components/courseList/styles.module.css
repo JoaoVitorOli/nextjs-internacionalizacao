@@ -1,0 +1,26 @@
+.cardList {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background-color: rgb(199, 229, 255);
+  gap: 1rem;
+}
+
+.card a {
+  background-color: rgb(96, 96, 248);
+  width: 80px;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.card a, .card span {
+  margin: 0.5rem;
+}

@@ -1,0 +1,10 @@
+.header {
+  margin-bottom: 1rem;
+}
+
+.header a {
+  background-color: gray;
+  padding: 0.5rem;
+
+  border-radius: 5px;
+}
