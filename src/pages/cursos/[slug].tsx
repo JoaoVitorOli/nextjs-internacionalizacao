@@ -25,8 +25,7 @@ export default function Cursos({ data }: cursosProps) {
       contentName: `MBA em teste`,
       currency: 'BRL',
       value: "R$ 1.000.000",
-    },
-    dataLayerName: 'Curso'
+    }
   };
 
   TagManager.dataLayer(tagManagerArgs);
