@@ -1,10 +1,18 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
+import TagManager from 'react-gtm-module';
 
 import { appWithTranslation } from 'next-i18next';
+import { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  useEffect(() => {
+    TagManager.initialize({ gtmId: 'GTM-PWJ5J5W', dataLayerName: 'Curso test' });
+  }, []);
+
+  return (
+    <Component {...pageProps} />
+  )
 }
 
 export default appWithTranslation(MyApp);

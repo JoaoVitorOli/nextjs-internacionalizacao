@@ -2,6 +2,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { ParsedUrlQuery } from "querystring";
+import TagManager from "react-gtm-module";
 import { baseEN, basePT } from "../../services/airtable";
 
 interface IParams extends ParsedUrlQuery {
@@ -17,6 +18,18 @@ interface cursosProps {
 
 export default function Cursos({ data }: cursosProps) {
   const { t } = useTranslation('course');
+
+  const tagManagerArgs = {
+    dataLayer: {
+      contentId: "ed123",
+      contentName: `MBA em teste`,
+      currency: 'BRL',
+      value: "R$ 1.000.000",
+    },
+    dataLayerName: 'Curso'
+  };
+
+  TagManager.dataLayer(tagManagerArgs);
 
   return (
     <>
